@@ -4,7 +4,7 @@
     "local": {
       "url": "http://minio:10000",
       "accessKey": "minio",
-      "secretKey": "minio_admin",
+      "secretKey": "minio",
       "api": "S3v4",
       "path": "auto"
     }
