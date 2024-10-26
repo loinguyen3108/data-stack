@@ -24,7 +24,7 @@
         <type>s3</type>
         <endpoint>http://minio:10000/clickhouse//</endpoint>
         <access_key_id>minio</access_key_id>
-        <secret_access_key>minio</secret_access_key>
+        <secret_access_key>minio_admin</secret_access_key>
         <region></region>
         <metadata_path>/var/lib/clickhouse/disks/s3/</metadata_path>
       </s3>

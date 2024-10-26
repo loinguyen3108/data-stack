@@ -30,7 +30,7 @@ services:
       - "10001:10001"
     environment:
       MINIO_ROOT_USER: minio
-      MINIO_ROOT_PASSWORD: minio
+      MINIO_ROOT_PASSWORD: minio_admin
     volumes:
       - ./data/minio:/data
     command: server --address 0.0.0.0:10000 --console-address 0.0.0.0:10001 /data
@@ -41,7 +41,7 @@ services:
       - minio
     entrypoint: >
       /bin/sh -c "
-      /usr/bin/mc config host add myminio http://minio:10000 minio minio;
+      /usr/bin/mc config host add myminio http://minio:10000 minio minio_admin;
       /usr/bin/mc admin info myminio;
       /usr/bin/mc mb myminio/clickhouse;
       /usr/bin/mc anonymous set public myminio/clickhouse;
